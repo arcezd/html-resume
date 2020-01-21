@@ -1,0 +1,117 @@
+{
+  "info": {
+    "firstname": "John",
+    "lastname": "Doe",
+    "secondSurname": "",
+    "resume": "Plaintiff, defendant & witness"
+  },
+  "contact": {
+    "website": "johndoe.gtld",
+    "email": "me@johndoe.gtld",
+    "linkedIn": "linkedin.com/in/john",
+    "phoneNumber": "800.000.0000"
+  },
+  "skills": [
+    ["Omnipresence", "Anonymity"],
+    ["Ordinarity", "No name rights"]
+  ],
+  "experiences": [{
+      "position": "Some Position",
+      "place": "Some Workplace",
+      "location": "(remote)",
+      "since": "2015",
+      "to": "present",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor"
+      ]
+    },
+    {
+      "position": "Another Position",
+      "place": "Some Workplace",
+      "location": "Some City, Some Country",
+      "since": "2014",
+      "to": "2015",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      ]
+    },
+    {
+      "position": "Yet Another Job Position",
+      "place": "Some Workplace",
+      "location": "Some City, Some Country",
+      "since": "2014",
+      "to": "2015",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      ]
+    }
+  ],
+  "projects": [{
+      "name": "Some Project 1",
+      "since": "2015",
+      "to": "2016",
+      "workplace": "Some Workplace",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio"
+      ]
+    },
+    {
+      "name": "Some Project 2",
+      "since": "2014",
+      "to": "2015",
+      "workplace": "Some Workplace",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor"
+      ]
+    },
+    {
+      "name": "Some Project 3",
+      "to": "2014",
+      "workplace": "Some Workplace",
+      "details": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio"
+      ]
+    }
+  ],
+  "education": [{
+      "since": "2009",
+      "to": "2014",
+      "title": "Ph.D. in Forty-Two Discovery",
+      "place": "Inexistent University",
+      "location": "Some City, Some Country",
+      "subtitle": "Relationship of the number with the answer to life, the universe and everything"
+    },
+    {
+      "since": "2005",
+      "to": "2009",
+      "title": "LL.B. in Hæmatophagic Economics",
+      "place": "Inexistent University",
+      "location": "Some City, Some Country",
+      "subtitle": "President's Scholarship"
+    },
+    {
+      "since": "2005",
+      "to": "2009",
+      "title": "B.S. in Existential Science (Double Major)",
+      "place": "Inexistent University",
+      "location": "Some City, Some Country",
+      "subtitle": "President's Scholarship"
+    },
+    {
+      "title": "Massive Online Fee–Required Course (selective list)",
+      "details": [
+        "Introduction to something else",
+        "Introduction to some more useless things",
+        "Philosophy in practice",
+        "Recursive research and its impact on recursive research",
+        "Artificial politics"
+      ]
+    }
+  ]
+}

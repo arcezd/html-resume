@@ -320,20 +320,31 @@ li{
 }
 
 .side-block{
-  margin-top: 0.5in; 
+  margin-top: 0.7in; 
 }
 
 #contact ul{
   margin-top: 0.05in;
   padding-left: 0;
   font-family: "Source Code Pro";
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.75;
 }
 
 #contact li > i{
   width: 9pt; /* for text alignment */
   text-align: right;
+}
+
+#contact a{
+  font-family: "Source Code Pro";
+  font-weight: 400;
+  text-decoration: none;
+  color: #444;
+}
+
+#contact i{
+  font-size: 12pt;
 }
 
 #skills{
