@@ -3,16 +3,11 @@
 
 <head>
   <meta charset="utf-8" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
-    type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"
-    type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700"
-    rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400italic,600italic,700italic,400,600,700"
-    rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,400,600,700"
-    rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -20,9 +15,8 @@
   <section id="main" style="width: 70vw; position: absolute;">
     <header id="title">
       <h1>{{info.firstname}} <strong>{{info.lastname}}</strong></h1>
-      {{#info.bio.length}}
-      {{#info.bio}}<div><span class="subtitle">{{.}}</span></div>{{/info.bio}}
-      {{/info.bio.length}}
+      {{#info.bio.length}} {{#info.bio}}
+      <div><span class="subtitle">{{.}}</span></div>{{/info.bio}} {{/info.bio.length}}
     </header>
     <section class="main-block">
       <h2>
@@ -31,8 +25,8 @@
       {{#experiences}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}}
-          {{#since}}<span>{{since}}</span>{{/since}}
+          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
+          <span>{{since}}</span>{{/since}}
         </div>
         <div class="decorator">
         </div>
@@ -62,8 +56,8 @@
       {{#projects}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}}
-          {{#since}}<span>{{since}}</span>{{/since}}
+          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
+          <span>{{since}}</span>{{/since}}
         </div>
         <div class="decorator">
         </div>
@@ -92,19 +86,19 @@
       {{#education}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}}
-          {{#since}}<span>{{since}}</span>{{/since}}
+          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
+          <span>{{since}}</span>{{/since}}
         </div>
         <div class="decorator">
         </div>
         <div class="details">
           <header>
             <h3>{{title}}</h3>
-            {{#place}}<span class="place">{{place}}</span>{{/place}}
-            {{#location}}<span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>{{/location}}
+            {{#place}}<span class="place">{{place}}</span>{{/place}} {{#location}}
+            <span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>{{/location}}
           </header>
-          {{#subtitle}}<div>{{subtitle}}</div>{{/subtitle}}
-          {{#details.length}}
+          {{#subtitle}}
+          <div>{{subtitle}}</div>{{/subtitle}} {{#details.length}}
           <div class="concise">
             <ul>
               {{#details}}
@@ -117,6 +111,16 @@
       </section>
       {{/education}}
     </section>
+    <section class="main-block">
+      <section class="blocks">
+        <div class="details">
+          <header>
+            <span class="footer">Please consider the environment before <code>printing</code>. <i class="fas fa-tree"></i></span>
+          </header>
+        </div>
+      </section>
+      {{/projects}}
+    </section>
   </section>
   <aside id="sidebar" style="margin-left: 70vw; position: absolute; height: 100vh; width: 30vw;">
     <div class="side-block" id="contact">
@@ -124,13 +128,14 @@
         Contact Info
       </h1>
       <ul>
-        {{#contact.website}}<li><a href={{contact.website.href}}><i class="fab fa-safari"></i>
-            {{contact.website.label}}</a></li>{{/contact.website}}
-        {{#contact.email}}<li><a href={{contact.email.href}}><i class="fas fa-envelope"></i>
-            {{contact.email.label}}</a></li>{{/contact.email}}
-        {{#contact.skype}}<li><a href={{contact.skype.href}}><i class="fab fa-skype"></i>
-            {{contact.skype.label}}</a></li>{{/contact.skype}}
-        {{#contact.phoneNumber}}<li><a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i>
+        {{#contact.website}}
+        <li><a href={{contact.website.href}}><i class="fab fa-safari"></i>
+            {{contact.website.label}}</a></li>{{/contact.website}} {{#contact.email}}
+        <li><a href={{contact.email.href}}><i class="fas fa-envelope"></i>
+            {{contact.email.label}}</a></li>{{/contact.email}} {{#contact.skype}}
+        <li><a href={{contact.skype.href}}><i class="fab fa-skype"></i>
+            {{contact.skype.label}}</a></li>{{/contact.skype}} {{#contact.phoneNumber}}
+        <li><a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i>
             {{contact.phoneNumber.label}}</a></li>{{/contact.phoneNumber}}
       </ul>
     </div>
@@ -139,11 +144,12 @@
         Social media
       </h1>
       <ul>
-        {{#socialMedia.github}}<li> <a href={{socialMedia.github.href}}><i class="fab fa-github"></i>
-            {{socialMedia.github.label}}</a></li>{{/socialMedia.github}}
-        {{#socialMedia.linkedIn}}<li> <a href={{socialMedia.linkedIn.href}}><i class="fab fa-linkedin-in"></i>
-            {{socialMedia.linkedIn.label}}</a></li>{{/socialMedia.linkedIn}}
-        {{#socialMedia.twitter}}<li> <a href={{socialMedia.twitter.href}}><i class="fab fa-twitter"></i>
+        {{#socialMedia.github}}
+        <li> <a href={{socialMedia.github.href}}><i class="fab fa-github"></i>
+            {{socialMedia.github.label}}</a></li>{{/socialMedia.github}} {{#socialMedia.linkedIn}}
+        <li> <a href={{socialMedia.linkedIn.href}}><i class="fab fa-linkedin-in"></i>
+            {{socialMedia.linkedIn.label}}</a></li>{{/socialMedia.linkedIn}} {{#socialMedia.twitter}}
+        <li> <a href={{socialMedia.twitter.href}}><i class="fab fa-twitter"></i>
             {{socialMedia.twitter.label}}</a></li>{{/socialMedia.twitter}}
       </ul>
     </div>
@@ -157,15 +163,13 @@
         <li>{{.}}</li>
         {{/skills.languages}}
       </ul>
-      {{/skills.languages.length}}
-      {{#skills.frameworks.length}}
+      {{/skills.languages.length}} {{#skills.frameworks.length}}
       <ul>
         {{#skills.frameworks}}
         <li>{{.}}</li>
         {{/skills.frameworks}}
       </ul>
-      {{/skills.frameworks.length}}
-      {{#skills.Other.length}}
+      {{/skills.frameworks.length}} {{#skills.Other.length}}
       <ul>
         {{#skills.Other}}
         <li>{{.}}</li>
@@ -173,9 +177,12 @@
       </ul>
       {{/skills.Other.length}}
     </div>
+    {{#build}}
     <div class="side-block" id="disclaimer">
-      Please consider the environment before <code>printing</code>. <i class="fas fa-tree"></i>
+      <p>Build using <code>GitHub Actions</code>. <i class="fas fa-code-branch"></i> {{ tagRef }}</p>
+      <p>Commit. <i class="fas fa-code"></i> {{ commitSha }}</p>
     </div>
+    {{/build}}
   </aside>
 </body>
 
