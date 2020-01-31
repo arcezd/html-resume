@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700"
+    rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400italic,600italic,700italic,400,600,700"
+    rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,400,600,700"
+    rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body lang="en">
+  <section id="main" style="width: 70vw; position: absolute;">
+    <header id="title">
+      <h1>{{info.firstname}} <strong>{{info.lastname}}</strong></h1>
+      {{#info.bio.length}}
+      {{#info.bio}}<div><span class="subtitle">{{.}}</span></div>{{/info.bio}}
+      {{/info.bio.length}}
+    </header>
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-suitcase"></i> Experiencia
+      </h2>
+      {{#experiences}}
+      <section class="blocks">
+        <div class="date">
+          {{#to}}<span>{{to}}</span>{{/to}}
+          {{#since}}<span>{{since}}</span>{{/since}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{position}}</h3>
+            <span class="place">{{place}}</span>
+            <span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>
+          </header>
+          {{#details.length}}
+          <div>
+            <ul>
+              {{#details}}
+              <li>{{.}}</li>
+              {{/details}}
+            </ul>
+          </div>
+          {{/details.length}}
+        </div>
+      </section>
+      {{/experiences}}
+    </section>
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-folder-open"></i> Proyectos
+      </h2>
+      {{#projects}}
+      <section class="blocks">
+        <div class="date">
+          {{#to}}<span>{{to}}</span>{{/to}}
+          {{#since}}<span>{{since}}</span>{{/since}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{name}}</h3>
+            <span class="place">{{workplace}}</span>
+          </header>
+          {{#details.length}}
+          <div>
+            <ul>
+              {{#details}}
+              <li>{{.}}</li>
+              {{/details}}
+            </ul>
+          </div>
+          {{/details.length}}
+        </div>
+      </section>
+      {{/projects}}
+    </section>
+    <section class="main-block concise">
+      <h2>
+        <i class="fas fa-graduation-cap"></i> Educación
+      </h2>
+      {{#education}}
+      <section class="blocks">
+        <div class="date">
+          {{#to}}<span>{{to}}</span>{{/to}}
+          {{#since}}<span>{{since}}</span>{{/since}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{title}}</h3>
+            {{#place}}<span class="place">{{place}}</span>{{/place}}
+            {{#location}}<span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>{{/location}}
+          </header>
+          {{#subtitle}}<div>{{subtitle}}</div>{{/subtitle}}
+          {{#details.length}}
+          <div class="concise">
+            <ul>
+              {{#details}}
+              <li>{{.}}</li>
+              {{/details}}
+            </ul>
+          </div>
+          {{/details.length}}
+        </div>
+      </section>
+      {{/education}}
+    </section>
+  </section>
+  <aside id="sidebar" style="margin-left: 70vw; position: absolute; height: 100vh; width: 30vw;">
+    <div class="side-block" id="contact">
+      <h1>
+        Contacto
+      </h1>
+      <ul>
+        {{#contact.website}}<li><a href={{contact.website.href}}><i class="fab fa-safari"></i>
+            {{contact.website.label}}</a></li>{{/contact.website}}
+        {{#contact.email}}<li><a href={{contact.email.href}}><i class="fas fa-envelope"></i>
+            {{contact.email.label}}</a></li>{{/contact.email}}
+        {{#contact.skype}}<li><a href={{contact.skype.href}}><i class="fab fa-skype"></i>
+            {{contact.skype.label}}</a></li>{{/contact.skype}}
+        {{#contact.phoneNumber}}<li><a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i>
+            {{contact.phoneNumber.label}}</a></li>{{/contact.phoneNumber}}
+      </ul>
+    </div>
+    <div class="side-block" id="contact">
+      <h1>
+        Social
+      </h1>
+      <ul>
+        {{#socialMedia.github}}<li> <a href={{socialMedia.github.href}}><i class="fab fa-github"></i>
+            {{socialMedia.github.label}}</a></li>{{/socialMedia.github}}
+        {{#socialMedia.linkedIn}}<li> <a href={{socialMedia.linkedIn.href}}><i class="fab fa-linkedin-in"></i>
+            {{socialMedia.linkedIn.label}}</a></li>{{/socialMedia.linkedIn}}
+        {{#socialMedia.twitter}}<li> <a href={{socialMedia.twitter.href}}><i class="fab fa-twitter"></i>
+            {{socialMedia.twitter.label}}</a></li>{{/socialMedia.twitter}}
+      </ul>
+    </div>
+    <div class="side-block" id="skills">
+      <h1>
+        Habilidades
+      </h1>
+      {{#skills.languages.length}}
+      <ul>
+        {{#skills.languages}}
+        <li>{{.}}</li>
+        {{/skills.languages}}
+      </ul>
+      {{/skills.languages.length}}
+      {{#skills.frameworks.length}}
+      <ul>
+        {{#skills.frameworks}}
+        <li>{{.}}</li>
+        {{/skills.frameworks}}
+      </ul>
+      {{/skills.frameworks.length}}
+      {{#skills.Other.length}}
+      <ul>
+        {{#skills.Other}}
+        <li>{{.}}</li>
+        {{/skills.Other}}
+      </ul>
+      {{/skills.Other.length}}
+    </div>
+    <div class="side-block" id="disclaimer">
+      Por favor considere el ambiente antes de <code>imprimir</code>. <i class="fas fa-tree"></i>
+    </div>
+  </aside>
+</body>
+
+</html>
