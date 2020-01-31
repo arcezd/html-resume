@@ -178,8 +178,10 @@
     </div>
     {{#build}}
     <div class="side-block" id="disclaimer">
-      <p>Generado utilizando <code>GitHub Actions</code>. <i class="fas fa-code-branch"></i> {{ tagRef }}</p>
-      <p>Commit. <i class="fas fa-code"></i> {{ commitSha }}</p>
+      <p>Generado utilizando
+        <a href="{{ repoUrl }}/actions"><code>GitHub Actions</code></a></p>
+      <p>{{ tagRef }} <i class="fas fa-code-branch"></i></p>
+      <p>Commit {{ commitSha }} <i class="fas fa-code"></i></p>
     </div>
     {{/build}}
   </aside>
