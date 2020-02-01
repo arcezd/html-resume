@@ -315,6 +315,9 @@ h2 {
   top: 0.25pt;
 }
 
+.fa-tree {
+  color: #0f5e0f;
+}
 
 /***** fine-tunes on the lists... *****/
 
@@ -381,6 +384,15 @@ h2 {
   font-family: "Source Code Pro";
   font-weight: 400;
   text-decoration: none;
+  /*color: #444;*/
+  color: #004563;
+}
+
+#contact a .fab {
+  color: #444;
+}
+
+#contact a .fas {
   color: #444;
 }
 
@@ -397,6 +409,28 @@ h2 {
   padding: 0;
 }
 
+#contributions {
+  /*color: #666;*/
+  /*margin-top: 0.7in;*/
+  line-height: 1.5;
+}
+
+#contributions ul {
+  margin: 0.05in 0 0.15in;
+  padding: 0;
+}
+
+#contributions ul ul {
+  margin: 0 0.10in 0.15in;
+  padding: 0;
+  font-size: 7pt;
+}
+
+#contributions a {
+  color: #004563;
+  text-decoration: none;
+}
+
 #disclaimer {
   position: absolute;
   bottom: var(--sidebar-horizontal-padding);
@@ -408,6 +442,10 @@ h2 {
   color: #777;
 }
 
+#disclaimer p {
+  margin: 0.03in 0 0 0;
+}
+
 #disclaimer code {
   color: #666;
   font-family: "Source Code Pro";
@@ -416,5 +454,6 @@ h2 {
 }
 
 #disclaimer a {
+  color: #004563;
   text-decoration: none;
 }
