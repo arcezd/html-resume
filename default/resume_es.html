@@ -176,6 +176,23 @@
       </ul>
       {{/skills.Other.length}}
     </div>
+    {{#contributions.length}}
+    <div class="side-block" id="contributions">
+      <h1>
+        Colaboración
+      </h1>
+      <ul>
+        {{#contributions}}
+        <li>{{repo}}</li>
+        <ul>
+          {{#links}}
+          <li>- <a href="{{url}}">{{label}}</a></li>
+          {{/links}}
+        </ul>
+        {{/contributions}}
+      </ul>
+    </div>
+    {{/contributions.length}}
     {{#build}}
     <div class="side-block" id="disclaimer">
       <p>Generado utilizando
