@@ -3,19 +3,46 @@
     "firstname": "John",
     "lastname": "Doe",
     "secondSurname": "",
-    "resume": "Plaintiff, defendant & witness"
+    "bio": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      "do eiusmod tempor incididunt ut labore",
+      "et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor"
+    ]
   },
   "contact": {
-    "website": "johndoe.gtld",
-    "email": "me@johndoe.gtld",
-    "linkedIn": "linkedin.com/in/john",
-    "phoneNumber": "800.000.0000"
+    "website": {
+      "label": "johndoe.gtld",
+      "href": "https://johndoe.gtld"
+    },
+    "email": {
+      "label": "me@johndoe.gtld",
+      "href": "mailto:me@johndoe.gtld"
+    },
+    "skype": {
+      "label": "johnfake",
+      "href": "skype:johnfake"
+    },
+    "phoneNumber": {
+      "label": "+1 800.000.0000",
+      "href": "tel:+1-800-000-0000"
+    }
   },
-  "skills": [
-    ["Omnipresence", "Anonymity"],
-    ["Ordinarity", "No name rights"]
-  ],
-  "experiences": [{
+  "socialMedia": {
+    "github": {
+      "label": "github",
+      "href": "http://fakegithub.com/johndoe"
+    },
+    "linkedIn": {
+      "label": "linkedIn",
+      "href": "http://fakelinkedIn/johndoe"
+    },
+    "twitter": {
+      "label": "twitter",
+      "href": "http://faketwitter/johndoe"
+    }
+  },
+  "experience": [{
       "position": "Some Position",
       "place": "Some Workplace",
       "location": "(remote)",
@@ -69,14 +96,6 @@
       "details": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor"
       ]
-    },
-    {
-      "name": "Some Project 3",
-      "to": "2014",
-      "workplace": "Some Workplace",
-      "details": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio"
-      ]
     }
   ],
   "education": [{
@@ -113,5 +132,30 @@
         "Artificial politics"
       ]
     }
-  ]
+  ],
+  "contributions": [{
+    "repo": "opensourcefriday",
+    "url": "https://github.com/github/opensourcefriday",
+    "links": [{
+      "label": "PR-1",
+      "url": "https://github.com/github/opensourcefriday/pull/1"
+    }]
+  }],
+  "skills": {
+    "languages": [
+      "Pascal",
+      "Delphi",
+      "Other old language"
+    ],
+    "frameworks": [
+      "framework",
+      "other-framework"
+    ],
+    "Other": [
+      "so",
+      "many",
+      "amazing",
+      "technologies"
+    ]
+  }
 }
