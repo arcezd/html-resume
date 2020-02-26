@@ -14,6 +14,7 @@
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
   --sidebar-horizontal-padding: 0.2in;
+  --sidebar-footer-padding: 0.6in;
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 10px;
   --decorator-outer-offset-left: -5.5px;
@@ -429,6 +430,24 @@ h2 {
 #contributions a {
   color: #004563;
   text-decoration: none;
+}
+
+#badges {
+  line-height: 1.5;
+  position: absolute;
+  bottom: var(--sidebar-footer-padding);
+  right: var(--sidebar-horizontal-padding);
+}
+
+#badges a {
+  border: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+#badges img {
+  height: 80px;
+  width: 80px;
 }
 
 #disclaimer {
