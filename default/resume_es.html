@@ -193,6 +193,19 @@
       </ul>
     </div>
     {{/contributions.length}}
+    {{#badges.aws.length}}
+    <div class="side-block" id="badges">
+      <ul>
+        {{#badges.aws}}
+        <li>
+          <a href="{{url}}" target="_blank">
+            <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+          </a>
+        </li>
+        {{/badges.aws}}
+      </ul>
+    </div>
+    {{/badges.aws.length}}
     {{#build}}
     <div class="side-block" id="disclaimer">
       <p><a href="{{ repoUrl }}/releases/tag/{{ version }}">{{ tagRef }} <i class="fas fa-code-branch"></i></a></p>
