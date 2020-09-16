@@ -439,6 +439,12 @@ h2 {
   right: var(--sidebar-horizontal-padding);
 }
 
+#badges ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
 #badges a {
   border: none;
   text-decoration: none;
