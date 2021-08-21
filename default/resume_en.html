@@ -14,19 +14,26 @@
 <body lang="en">
   <section id="main" style="width: 70vw; position: absolute;">
     <header id="title">
-      <h1>{{info.firstname}} <strong>{{info.lastname}}</strong></h1>
-      {{#info.bio.length}} {{#info.bio}}
-      <div><span class="subtitle">{{.}}</span></div>{{/info.bio}} {{/info.bio.length}}
+      {{#with info}}
+      <h1>{{firstname}} <strong>{{lastname}}</strong></h1>
+      {{#each bio}}
+      <div><span class="subtitle">{{this}}</span></div>
+      {{/each}}
+      {{/with}}
     </header>
     <section class="main-block">
       <h2>
         <i class="fas fa-suitcase"></i> Experience
       </h2>
-      {{#experience}}
+      {{#each experience}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
-          <span>{{since}}</span>{{/since}}
+          {{#if to}}
+          <span>{{to}}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{since}}</span>
+          {{/if}}
         </div>
         <div class="decorator">
         </div>
@@ -36,28 +43,32 @@
             <span class="place">{{place}}</span>
             <span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>
           </header>
-          {{#details.length}}
+          {{#if details}}
           <div>
             <ul>
-              {{#details}}
-              <li>{{.}}</li>
-              {{/details}}
+              {{#each details}}
+              <li>{{this}}</li>
+              {{/each}}
             </ul>
           </div>
-          {{/details.length}}
+          {{/if}}
         </div>
       </section>
-      {{/experience}}
+      {{/each}}
     </section>
     <section class="main-block">
       <h2>
         <i class="fas fa-folder-open"></i> Some projects
       </h2>
-      {{#projects}}
+      {{#each projects}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
-          <span>{{since}}</span>{{/since}}
+          {{#if to}}
+          <span>{{to}}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{since}}</span>
+          {{/if}}
         </div>
         <div class="decorator">
         </div>
@@ -66,50 +77,54 @@
             <h3>{{name}}</h3>
             <span class="place">{{workplace}}</span>
           </header>
-          {{#details.length}}
+          {{#if details}}
           <div>
             <ul>
-              {{#details}}
-              <li>{{.}}</li>
-              {{/details}}
+              {{#each details}}
+              <li>{{this}}</li>
+              {{/each}}
             </ul>
           </div>
-          {{/details.length}}
+          {{/if}}
         </div>
       </section>
-      {{/projects}}
+      {{/each}}
     </section>
     <section class="main-block concise">
       <h2>
         <i class="fas fa-graduation-cap"></i> Education
       </h2>
-      {{#education}}
+      {{#each education}}
       <section class="blocks">
         <div class="date">
-          {{#to}}<span>{{to}}</span>{{/to}} {{#since}}
-          <span>{{since}}</span>{{/since}}
+          {{#if to}}
+          <span>{{to}}</span>
+          {{/if}}
+          {{#if since}}
+          <span>{{since}}</span>
+          {{/if}}
         </div>
         <div class="decorator">
         </div>
         <div class="details">
           <header>
             <h3>{{title}}</h3>
-            {{#place}}<span class="place">{{place}}</span>{{/place}} {{#location}}
-            <span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>{{/location}}
+            {{#if place}}<span class="place">{{place}}</span>{{/if}}
+            {{#if location}}<span class="location"><i class="fas fa-map-marker-alt"></i> {{location}}</span>{{/if}}
           </header>
-          {{#subtitle}}
-          <div>{{subtitle}}</div>{{/subtitle}} {{#details.length}}
+          {{#if subtitle}}<div>{{subtitle}}</div>{{/if}}
+          {{#if details}}
           <div class="concise">
             <ul>
-              {{#details}}
-              <li>{{.}}</li>
-              {{/details}}
+              {{#each details}}
+              <li>{{this}}</li>
+              {{/each}}
             </ul>
           </div>
-          {{/details.length}}
+          {{/if}}
         </div>
       </section>
-      {{/education}}
+      {{/each}}
     </section>
     <section class="main-block">
       <section class="blocks">
@@ -122,105 +137,127 @@
     </section>
   </section>
   <aside id="sidebar" style="margin-left: 70vw; position: absolute; height: 100vh; width: 30vw;">
+    {{#with contact}}
     <div class="side-block" id="contact">
       <h1>
         Contact Info
       </h1>
       <ul>
-        {{#contact.website}}
-        <li><a href={{contact.website.href}}><i class="fab fa-safari"></i>
-            {{contact.website.label}}</a></li>{{/contact.website}} {{#contact.email}}
-        <li><a href={{contact.email.href}}><i class="fas fa-envelope"></i>
-            {{contact.email.label}}</a></li>{{/contact.email}} {{#contact.skype}}
-        <li><a href={{contact.skype.href}}><i class="fab fa-skype"></i>
-            {{contact.skype.label}}</a></li>{{/contact.skype}} {{#contact.phoneNumber}}
-        <li><a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i>
-            {{contact.phoneNumber.label}}</a></li>{{/contact.phoneNumber}}
+        {{#if website}}
+        <li>
+          <a href={{contact.website.href}}><i class="fab fa-safari"></i> {{website.label}}</a>
+        </li>
+        {{/if}}
+        {{#if email}}
+        <li>
+          <a href={{contact.email.href}}><i class="fas fa-envelope"></i> {{email.label}}</a>
+        </li>
+        {{/if}}
+        {{#if skype}}
+        <li>
+          <a href={{contact.skype.href}}><i class="fab fa-skype"></i> {{skype.label}}</a>
+        </li>
+        {{/if}}
+        {{#if phoneNumber}}
+        <li>
+          <a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i> {{phoneNumber.label}}</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
+    {{/with}}
+    {{#with socialMedia}}
     <div class="side-block" id="contact">
       <h1>
         Social media
       </h1>
       <ul>
-        {{#socialMedia.github}}
-        <li> <a href={{socialMedia.github.href}}><i class="fab fa-github"></i>
-            {{socialMedia.github.label}}</a></li>{{/socialMedia.github}} {{#socialMedia.linkedIn}}
-        <li> <a href={{socialMedia.linkedIn.href}}><i class="fab fa-linkedin-in"></i>
-            {{socialMedia.linkedIn.label}}</a></li>{{/socialMedia.linkedIn}} {{#socialMedia.twitter}}
-        <li> <a href={{socialMedia.twitter.href}}><i class="fab fa-twitter"></i>
-            {{socialMedia.twitter.label}}</a></li>{{/socialMedia.twitter}}
+        {{#if github}}
+        <li> <a href={{github.href}}><i class="fab fa-github"></i> {{github.label}}</a></li>
+        {{/if}}
+        {{#if linkedIn}}
+        <li> <a href={{linkedIn.href}}><i class="fab fa-linkedin-in"></i> {{linkedIn.label}}</a></li>
+        {{/if}} 
+        {{#if twitter}}
+        <li> <a href={{twitter.href}}><i class="fab fa-twitter"></i> {{twitter.label}}</a></li>
+        {{/if}}
       </ul>
     </div>
+    {{/with}}
+    {{#with skills}}
     <div class="side-block" id="skills">
       <h1>
         Skills
       </h1>
-      {{#skills.languages.length}}
+      {{#if languages}}
       <ul>
-        {{#skills.languages}}
-        <li>{{.}}</li>
-        {{/skills.languages}}
+        {{#each languages}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
-      {{/skills.languages.length}} {{#skills.frameworks.length}}
+      {{/if}}
+      {{#if frameworks}}
       <ul>
-        {{#skills.frameworks}}
-        <li>{{.}}</li>
-        {{/skills.frameworks}}
+        {{#each frameworks}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
-      {{/skills.frameworks.length}} {{#skills.Other.length}}
+      {{/if}}
+      {{#if Other}}
       <ul>
-        {{#skills.Other}}
-        <li>{{.}}</li>
-        {{/skills.Other}}
+        {{#each Other}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
-      {{/skills.Other.length}}
+      {{/if}}
     </div>
-    {{#contributions.length}}
+    {{/with}}
+    {{#if contributions}}
     <div class="side-block" id="contributions">
       <h1>
         Contributions
       </h1>
       <ul>
-        {{#contributions}}
+        {{#each contributions}}
         <li>{{repo}}</li>
         <ul>
-          {{#links}}
+          {{#each links}}
           <li>- <a href="{{url}}">{{label}}</a></li>
-          {{/links}}
+          {{/each}}
         </ul>
-        {{/contributions}}
+        {{/each}}
       </ul>
     </div>
-    {{/contributions.length}}
-    {{#badges.aws.length}}
+    {{/if}}
+    {{#if badges}}
+    {{#with badges}}
     <div class="side-block" id="badges">
       <ul>
-        {{#badges.aws}}
+        {{#each aws}}
         <li>
           <a href="{{url}}" target="_blank">
             <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
           </a>
         </li>
-        {{/badges.aws}}
-        {{#badges.azure}}
+        {{/each}}
+        {{#each azure}}
         <li>
           <a href="{{url}}" target="_blank">
             <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
           </a>
         </li>
-        {{/badges.azure}}
+        {{/each}}
       </ul>
     </div>
-    {{/badges.aws.length}}
-    {{#build}}
+    {{/with}}
+    {{/if}}
+    {{#with build}}
     <div class="side-block" id="disclaimer">
       <p><a href="{{ repoUrl }}/releases/tag/{{ version }}">{{ tagRef }} <i class="fas fa-code-branch"></i></a></p>
       <p><a href="{{ repoUrl }}/commit/{{ commitSha }}">commit {{ commitSha }} <i class="fas fa-code"></i></p></a>
       <p>Compiled with <a href="{{ repoUrl }}/actions"><code>GitHub Actions <i class="fab fa-github-square"></i></code></a></p>
     </div>
-    {{/build}}
+    {{/with}}
   </aside>
 </body>
-
 </html>
