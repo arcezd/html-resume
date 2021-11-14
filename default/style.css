@@ -433,16 +433,16 @@ h2 {
 }
 
 #badges {
-  line-height: 1.5;
+  line-height: 1.0;
   position: absolute;
   bottom: var(--sidebar-footer-padding);
   right: var(--sidebar-horizontal-padding);
 }
 
 #badges ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 }
 
 #badges a {
@@ -452,8 +452,8 @@ h2 {
 }
 
 #badges img {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
 }
 
 #disclaimer {

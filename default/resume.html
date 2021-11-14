@@ -11,7 +11,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body lang="es">
+<body lang="en">
   <section id="main" style="width: 70vw; position: absolute;">
     <header id="title">
       {{#with info}}
@@ -23,7 +23,7 @@
     </header>
     <section class="main-block">
       <h2>
-        <i class="fas fa-suitcase"></i> Experiencia
+        <i class="fas fa-suitcase"></i>{{i18n 'experience_title'}}
       </h2>
       {{#each experience}}
       <section class="blocks">
@@ -58,7 +58,7 @@
     </section>
     <section class="main-block">
       <h2>
-        <i class="fas fa-folder-open"></i> Algunos proyectos
+        <i class="fas fa-folder-open"></i> {{i18n 'projects_title'}}
       </h2>
       {{#each projects}}
       <section class="blocks">
@@ -92,7 +92,7 @@
     </section>
     <section class="main-block concise">
       <h2>
-        <i class="fas fa-graduation-cap"></i> Educación
+        <i class="fas fa-graduation-cap"></i> {{i18n 'education_title'}}
       </h2>
       {{#each education}}
       <section class="blocks">
@@ -130,7 +130,7 @@
       <section class="blocks">
         <div class="details">
           <header>
-            <span class="footer">Por favor considere el ambiente antes de <code>imprimir</code> <i class="fas fa-tree"></i></span>
+            <span class="footer">Please consider the environment before <code>printing</code> <i class="fas fa-tree"></i></span>
           </header>
         </div>
       </section>
@@ -140,27 +140,27 @@
     {{#with contact}}
     <div class="side-block" id="contact">
       <h1>
-        Contacto
+        {{i18n 'contact_title'}}
       </h1>
       <ul>
         {{#if website}}
         <li>
-          <a href={{contact.website.href}}><i class="fab fa-safari"></i> {{website.label}}</a>
+          <a href={{website.href}}><i class="fab fa-safari"></i> {{website.label}}</a>
         </li>
         {{/if}}
         {{#if email}}
         <li>
-          <a href={{contact.email.href}}><i class="fas fa-envelope"></i> {{email.label}}</a>
+          <a href={{email.href}}><i class="fas fa-envelope"></i> {{email.label}}</a>
         </li>
         {{/if}}
         {{#if skype}}
         <li>
-          <a href={{contact.skype.href}}><i class="fab fa-skype"></i> {{skype.label}}</a>
+          <a href={{skype.href}}><i class="fab fa-skype"></i> {{skype.label}}</a>
         </li>
         {{/if}}
         {{#if phoneNumber}}
         <li>
-          <a href={{contact.phoneNumber.href}}><i class="fas fa-phone-alt"></i> {{phoneNumber.label}}</a>
+          <a href={{phoneNumber.href}}><i class="fas fa-phone-alt"></i> {{phoneNumber.label}}</a>
         </li>
         {{/if}}
       </ul>
@@ -169,7 +169,7 @@
     {{#with socialMedia}}
     <div class="side-block" id="contact">
       <h1>
-        Social
+        {{i18n 'social_media_title'}}
       </h1>
       <ul>
         {{#if github}}
@@ -187,7 +187,7 @@
     {{#with skills}}
     <div class="side-block" id="skills">
       <h1>
-        Habilidades
+        {{i18n 'skills_title'}}
       </h1>
       {{#if languages}}
       <ul>
@@ -215,7 +215,7 @@
     {{#if contributions}}
     <div class="side-block" id="contributions">
       <h1>
-        Colaboración
+        {{i18n 'contributions_title'}}
       </h1>
       <ul>
         {{#each contributions}}
@@ -247,6 +247,13 @@
           </a>
         </li>
         {{/each}}
+        {{#each linuxfoundation}}
+        <li>
+          <a href="{{url}}" target="_blank">
+            <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+          </a>
+        </li>
+        {{/each}}
       </ul>
     </div>
     {{/with}}
@@ -255,7 +262,7 @@
     <div class="side-block" id="disclaimer">
       <p><a href="{{ repoUrl }}/releases/tag/{{ version }}">{{ tagRef }} <i class="fas fa-code-branch"></i></a></p>
       <p><a href="{{ repoUrl }}/commit/{{ commitSha }}">commit {{ commitSha }} <i class="fas fa-code"></i></p></a>
-      <p>Compilado utilizando <a href="{{ repoUrl }}/actions"><code>GitHub Actions <i class="fab fa-github-square"></i></code></a></p>
+      <p>{{i18n 'compiled_with_lbl'}} <a href="{{ repoUrl }}/actions"><code>GitHub Actions <i class="fab fa-github-square"></i></code></a></p>
     </div>
     {{/with}}
   </aside>
