@@ -221,33 +221,25 @@
     </div>
     {{/if}}
     {{#if badges}}
-    {{#with badges}}
-    <div class="side-block" id="badges">
-      <ul>
-        {{#each aws}}
-        <li>
-          <a href="{{url}}" target="_blank">
-            <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
-          </a>
-        </li>
-        {{/each}}
-        {{#each azure}}
-        <li>
-          <a href="{{url}}" target="_blank">
-            <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
-          </a>
-        </li>
-        {{/each}}
-        {{#each linuxfoundation}}
-        <li>
-          <a href="{{url}}" target="_blank">
-            <img src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
-          </a>
-        </li>
-        {{/each}}
-      </ul>
+    <div class="container-badges">
+      {{#with badges}}
+      {{#each aws}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{#each azure}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{#each linuxfoundation}}
+      <a href="{{url}}" target="_blank">
+        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      </a>
+      {{/each}}
+      {{/with}}
     </div>
-    {{/with}}
     {{/if}}
     {{#with build}}
     <div class="side-block" id="disclaimer">
