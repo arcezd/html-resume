@@ -92,6 +92,34 @@
       {{/each}}
     </section>
     {{/if}}
+    {{#if certifications}}
+    <section class="main-block">
+      <h2>
+        <i class="fas fa-folder-open"></i> {{ i18n 'certifications_title' }}
+      </h2>
+      {{#each certifications}}
+      <section class="blocks">
+        <div class="date">
+          {{#if issueDate}}
+          <span>{{ onlyYearDate issueDate }}</span>
+          {{/if}}
+        </div>
+        <div class="decorator">
+        </div>
+        <div class="details">
+          <header>
+            <h3>{{ title }}</h3>
+            {{#if issuedBy}}
+            <span class="place">by {{ issuedBy }}
+            {{#if expirationDate}} | {{ i18n 'valid_until' }} {{ shortDate expirationDate }}{{/if}}
+            </span>
+            {{/if}}
+          </header>
+        </div>
+      </section>
+      {{/each}}
+    </section>
+    {{/if}}
     {{#if education}}
     <section class="main-block concise">
       <h2>
