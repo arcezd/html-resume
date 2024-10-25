@@ -1,10 +1,12 @@
 {
   "experience_title": "EXPERIENCE",
   "projects_title": "SOME PROJECTS",
+  "certifications_title": "CERTIFICATIONS",
   "education_title": "EDUCATION",
   "contact_title": "CONTACT INFO",
   "social_media_title": "SOCIAL MEDIA",
   "skills_title": "SKILLS",
   "contributions_title": "CONTRIBUTIONS",
-  "compiled_with_lbl": "Compiled with"
+  "compiled_with_lbl": "Compiled with",
+  "valid_until": "valid until"
 }

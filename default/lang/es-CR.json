@@ -1,10 +1,12 @@
 {
   "experience_title": "EXPERIENCIA",
   "projects_title": "ALGUNOS PROYECTOS",
+  "certifications_title": "CERTIFICACIONES",
   "education_title": "EDUCACIÓN",
   "contact_title": "CONTACTO",
   "social_media_title": "SOCIAL",
   "skills_title": "HABILIDADES",
   "contributions_title": "COLABORACIÓN",
-  "compiled_with_lbl": "Compilado utilizando"
+  "compiled_with_lbl": "Compilado utilizando",
+  "valid_until": "valido hasta"
 }
