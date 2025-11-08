@@ -73,7 +73,7 @@ li {
   position: relative;
   /* for disclaimer */
   width: var(--sidebar-width);
-  /* height: 100%;*/
+  /* height: 100%; */
   padding: 0.6in var(--sidebar-horizontal-padding);
   background-color: #f2f2f2;
   font-size: 8.5pt;
@@ -435,7 +435,7 @@ h2 {
 .container-badges {
   margin-top: 0.9in;
   display: flex;
-  flex-flow: row-reverse wrap-reverse;  /* ← key change */
+  flex-flow: row-reverse wrap-reverse;  /* <- key change */
   justify-content: flex-start;          /* start = right when row-reverse */
   gap: 2pt;
 }
@@ -449,7 +449,6 @@ h2 {
 /* three badges per row */
 .badge {
   flex: 0 0 32%;
-  text-decoration: none;
 }
 
 /* ensure images fill */
