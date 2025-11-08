@@ -257,23 +257,11 @@
     {{/if}}
     {{#if badges}}
     <div class="container-badges">
-      {{#with badges}}
-      {{#each aws}}
-      <a href="{{url}}" target="_blank">
-        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
+      {{#reverse badges}}
+      <a href="{{url}}" target="_blank" class="badge">
+        <img src="{{assetPath badgePng}}" alt="{{title}}" title="{{title}}">
       </a>
-      {{/each}}
-      {{#each azure}}
-      <a href="{{url}}" target="_blank">
-        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
-      </a>
-      {{/each}}
-      {{#each linuxfoundation}}
-      <a href="{{url}}" target="_blank">
-        <img class="badge" src="{{imgUrl}}" alt="{{title}}" title="{{title}}">
-      </a>
-      {{/each}}
-      {{/with}}
+      {{/reverse}}
     </div>
     {{/if}}
     {{#with build}}
